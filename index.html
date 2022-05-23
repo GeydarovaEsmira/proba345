@@ -41,18 +41,18 @@
              
             GLTF.load("Flamingo.glb", function(mesh){
                            
-                parot = mesh.scene;
+                flamingo = mesh.scene;
 
-                parot.traverse(function(obj){
+                flamingo.traverse(function(obj){
                     if (obj.isMesh) {
                         obj.castShadow = true;
                         obj.receiveShadow = true;
                     }
                 });
                 
-                parot.position.set(-100, -20, 300); 
+                flamingo.position.set(-100, -20, 300); 
 
-                scene.add(parot);
+                scene.add(flamingo);
             });            
 
             controls = new THREE.OrbitControls(camera,renderer.domElement); 
